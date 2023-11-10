@@ -85,6 +85,19 @@ public class Email {
      public void changePassword(String password){
         this.password = password;
      }
+
+     /*
+      * Getters
+      */
+      // Get mailbox capacity
+     public int getMailboxCapacity(){
+        return mailboxCapacity;
+     }
+
+     // Get alternate email
+     public String getAlternateEmail(){
+        return alternateEmail;
+     }
  
      // Setters
      public void setFirstName(String fname){
