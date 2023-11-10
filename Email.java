@@ -20,11 +20,11 @@ public class Email {
      public Email(String fname, String lname){
         this.first_name = fname;
         this.last_name = lname;
-        System.out.println("Email for " + this.first_name + " " + this.last_name + " successfully created!");
+       // System.out.println("Email for " + this.first_name + " " + this.last_name + " successfully created!");
 
         // Call a method that will ask user for the department - returns department
         this.department = setDept();
-        System.out.println("The department " + this.department + " was succesfully selected.");
+        // System.out.println("The department " + this.department + " was succesfully selected.");
 
         // Call a method that returns as random password
         this.password = generatePassword(10);
@@ -32,12 +32,12 @@ public class Email {
 
         // Generate email with format firstname.lastname@department.company.com
         this.email = this.first_name.toLowerCase() + "." + this.last_name.toLowerCase() + "@" + this.department.toLowerCase() + "." + companySuffix;
-        System.out.println("Your email address is: " + this.email);
+       // System.out.println("Your email address is: " + this.email);
      }
 
      // Ask for the department
      private String setDept(){
-        System.out.print("Department codes: \n1 - Sales\n2 - Development\n3 - Accounting\n0 - None.\nEnter a code: ");
+        System.out.print("New employee: "+ first_name + "\nDepartment codes: \n1 - Sales\n2 - Development\n3 - Accounting\n0 - None.\nEnter a code: ");
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
         if(choice == 1){
@@ -98,42 +98,16 @@ public class Email {
      public String getAlternateEmail(){
         return alternateEmail;
      }
- 
-     // Setters
-     public void setFirstName(String fname){
-         first_name = fname;
-     }
- 
-     public void setLastName(String lname){
-         last_name = lname;
-     }
- 
-     
- 
-     public void setPassword(String pwd){
-         password = pwd;
-     }
- 
- 
-     // Getters
-     public String getFirstName(){
-         return first_name;
-     }
- 
-     public String getLastName(){
-         return last_name;
-     }
- 
-     public String getDept(){
-         return department;
-     }
- 
+
+     // Get password
      public String getPassword(){
-         return password;
+        return password;
      }
- 
-     public String getEmail(){
-         return password;
+
+     /*
+      * Name, email, mailbox capacity
+      */
+     public String showInfo(){
+        return "Display name: " + first_name + " " + last_name + "\nCompany Email: " + email + "\nMailbox capacity: " + mailboxCapacity + " mb";
      }
-    
 }

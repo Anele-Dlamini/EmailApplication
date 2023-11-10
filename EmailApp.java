@@ -8,8 +8,10 @@ public class EmailApp{
     Email em1 = new Email("John", "Smith");
 
     // testing set and get
-    em1.setAltEmail("js@gmail.com");
-    System.out.println(em1.getAlternateEmail());
+   // em1.setAltEmail("js@gmail.com");
+   // System.out.println(em1.getAlternateEmail());
+
+   System.out.println(em1.showInfo());
 
    }
 
